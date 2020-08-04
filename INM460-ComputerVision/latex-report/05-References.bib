@@ -1,0 +1,116 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% INM430 REFERENCES %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@inproceedings{imagenet_cvpr09,
+        AUTHOR = {Deng, J. and Dong, W. and Socher, R. and Li, L.-J. and Li, K. and Fei-Fei, L.},
+        TITLE = {{ImageNet: A Large-Scale Hierarchical Image Database}},
+        BOOKTITLE = {CVPR09},
+        YEAR = {2009},
+        BIBSOURCE = "http://www.image-net.org/papers/imagenet_cvpr09.bib"}
+        
+@book{MATLAB:2018,
+year = {2018},
+author = {MATLAB},
+title = {version 9.5.0 (R2018b)},
+publisher = {The MathWorks Inc.},
+address = {Natick, Massachusetts}
+}
+
+@inproceedings{990517,
+  abstract = {This paper describes a machine learning approach for visual object detection which is capable of processing images extremely rapidly and achieving high detection rates. This work is distinguished by three key contributions. The first is the introduction of a new image representation called the "integral image" which allows the features used by our detector to be computed very quickly. The second is a learning algorithm, based on AdaBoost, which selects a small number of critical visual features from a larger set and yields extremely efficient classifiers. The third contribution is a method for combining increasingly more complex classifiers in a "cascade" which allows background regions of the image to be quickly discarded while spending more computation on promising object-like regions. The cascade can be viewed as an object specific focus-of-attention mechanism which unlike previous approaches provides statistical guarantees that discarded regions are unlikely to contain the object of interest. In the domain of face detection the system yields detection rates comparable to the best previous systems. Used in real-time applications, the detector runs at 15 frames per second without resorting to image differencing or skin color detection.},
+  added-at = {2013-09-17T16:42:59.000+0200},
+  author = {Viola, P. and Jones, M.},
+  biburl = {https://www.bibsonomy.org/bibtex/2dd187d0d48af62e8a3d9ae889feed87d/vitoryano},
+  booktitle = {Computer Vision and Pattern Recognition, 2001. CVPR 2001. Proceedings of the 2001 IEEE Computer Society Conference on},
+  description = {IEEE Xplore - Rapid object detection using a boosted cascade of simple features},
+  doi = {10.1109/CVPR.2001.990517},
+  interhash = {6e91e05067cf5a5405f448de79c960fa},
+  intrahash = {dd187d0d48af62e8a3d9ae889feed87d},
+  issn = {1063-6919},
+  keywords = {pdi},
+  pages = {I-511-I-518 vol.1},
+  timestamp = {2013-09-17T16:42:59.000+0200},
+  title = {Rapid object detection using a boosted cascade of simple features},
+  url = {http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=990517&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D990517},
+  volume = 1,
+  year = 2001
+}
+
+@manual{INM460-lab-wk6,
+  title  = "INM460 / IN3060 Computer Vision Lab 6 solutions",
+  author = "Unknown",
+  url    = "https://moodle.city.ac.uk/pluginfile.php/1882457/mod_resource/content/1/Lab06_with_solutions.pdf",
+  year   = "2020 (May, 2, 2020)"
+}
+
+@manual{INM460-lab-wk8,
+  title  = "INM460 / IN3060 Computer Vision Lab 8",
+  author = "Unknown",
+  url    = "https://moodle.city.ac.uk/pluginfile.php/1882457/mod_resource/content/1/Lab06_with_solutions.pdf",
+  year   = "2020 (May, 2, 2020)"
+}
+
+@article{citeulike:335784,
+  abstract = {We study the question of feature sets for robust visual object recognition,
+	adopting linear SVM based human detection as a test case. After reviewing
+	existing edge and gradient based descriptors, we show experimentally
+	that grids of Histograms of Oriented Gradient (HOG) descriptors significantly
+	outperform existing feature sets for human detection. We study the
+	influence of each stage of the computation on performance, concluding
+	that fine-scale gradients, fine orientation binning, relatively coarse
+	spatial binning, and high-quality local contrast normalization in
+	overlapping descriptor blocks are all important for good results.
+	The new approach gives near-perfect separation on the original MIT
+	pedestrian database, so we introduce a more challenging dataset containing
+	over 1800 annotated human images with a large range of pose variations
+	and backgrounds.},
+  added-at = {2009-08-24T22:23:57.000+0200},
+  author = {Dalal, N. and Triggs, B.},
+  biburl = {https://www.bibsonomy.org/bibtex/23765f5c9ab9abdf0efe63d50c64147d5/sitrke},
+  citeulike-article-id = {335784},
+  citeulike-linkout-0 = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1467360},
+  description = {Human Detection},
+  file = {:paperpool\\hog.pdf:PDF},
+  interhash = {a19602b4d8fd42e73d957ae456280c17},
+  intrahash = {3765f5c9ab9abdf0efe63d50c64147d5},
+  journal = {Computer Vision and Pattern Recognition, 2005. CVPR 2005. IEEE Computer
+	Society Conference on},
+  keywords = {detection, vision},
+  pages = {886--893},
+  posted-at = {2007-03-13 17:24:40},
+  priority = {2},
+  timestamp = {2009-08-24T22:23:57.000+0200},
+  title = {Histograms of Oriented Gradients for Human Detection},
+  url = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1467360},
+  volume = 1,
+  year = 2005
+}
+
+@article{Bay2008346,
+  abstract = {This article presents a novel scale- and rotation-invariant detector and descriptor, coined SURF (Speeded-Up Robust Features). SURF approximates or even outperforms previously proposed schemes with respect to repeatability, distinctiveness, and robustness, yet can be computed and compared much faster.
+
+This is achieved by relying on integral images for image convolutions; by building on the strengths of the leading existing detectors and descriptors (specifically, using a Hessian matrix-based measure for the detector, and a distribution-based descriptor); and by simplifying these methods to the essential. This leads to a combination of novel detection, description, and matching steps.
+
+The paper encompasses a detailed description of the detector and descriptor and then explores the effects of the most important parameters. We conclude the article with SURF’s application to two challenging, yet converse goals: camera calibration as a special case of image registration, and object recognition. Our experiments underline SURF’s usefulness in a broad range of topics in computer vision.},
+  added-at = {2012-09-30T19:58:26.000+0200},
+  author = {Bay, Herbert and Ess, Andreas and Tuytelaars, Tinne and Gool, Luc Van},
+  biburl = {https://www.bibsonomy.org/bibtex/2dfea172dfaca0272dcdc66acf92ec58d/daill},
+  description = {ScienceDirect.com - Computer Vision and Image Understanding - Speeded-Up Robust Features (SURF)},
+  doi = {10.1016/j.cviu.2007.09.014},
+  interhash = {befc128dd8bce45a9d0308f72dc9a95a},
+  intrahash = {dfea172dfaca0272dcdc66acf92ec58d},
+  issn = {1077-3142},
+  journal = {Computer Vision and Image Understanding},
+  keywords = {detector feature surf},
+  note = {Similarity Matching in Computer Vision and Multimedia},
+  number = 3,
+  pages = {346 - 359},
+  timestamp = {2012-09-30T19:58:26.000+0200},
+  title = {SURF: Speeded Up Robust Features},
+  url = {http://www.sciencedirect.com/science/article/pii/S1077314207001555},
+  volume = 110,
+  year = 2008
+}
+
+

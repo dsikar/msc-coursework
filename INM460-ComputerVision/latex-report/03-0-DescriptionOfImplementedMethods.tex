@@ -1,0 +1,31 @@
+\section{Description of implemented methods}
+\label{DOIM-marker} 
+Three face recognition feature-classifier types were implemented: Convolutional Neural Network (CNN), Histogram of Oriented Gradients and Support Vector Machine (HOG-SVM) and Speeded-up Robust Features and Support Vector Machine (SURF-SVM), mostly based on code covered in labs, with some adaptations for HOG-SVM and SURF-SVM, as well as CNN for grayscale images. A gridsearch was run for each method, aiming to find optimal image sizes, colour schemes and some parameter tuning for HOG-SVM and SURF-SVM. Script \textbf{TrainNetworks.m} was used for the grid searches and to generate classifiers, confusion matrices and statistics, by looping through all parameters being tested for each classifier. Best performing classifiers for labelled individual image dataset, tested on 980 images, are displayed in Table \ref{table:acc_table}.
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\multicolumn{3}{|l|}{Accuracy of face recognition models} \\ \hline
+Feature-Classifier  &  Name & Accuracy \\ \hline
+CNN & dan\_net\_70\_rgb & 0.9990 \\ \hline
+HOG-SVM & HOGSVMMdl\_70x70 & 0.9990 \\ \hline
+SURF-SVM & SURFSVMMdl\_70px\_50pt & 0.8656 \\ \hline
+\end{tabular}
+\caption{Accuracy table for labelled individual images}
+\label{table:acc_table}
+\end{table}
+We then tested each classifier on 5 group images. We used function \textbf{RecogniseFace} which identified a total of 101 faces, then computed the accuracies manually. Results are shown in Table \ref{table:acc_table_group}.
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\multicolumn{3}{|l|}{Accuracy of face recognition models} \\ \hline
+Feature-Classifier  &  Name & Accuracy \\ \hline
+CNN & dan\_net\_70\_rgb & 0.1386 \\ \hline
+HOG-SVM & HOGSVMMdl\_70x70 & 0.1287 \\ \hline
+SURF-SVM & SURFSVMMdl\_70px\_50pt & 0.1188 \\ \hline
+\end{tabular}
+\caption{Accuracy table for group images}
+\label{table:acc_table_group}
+\end{table}
+

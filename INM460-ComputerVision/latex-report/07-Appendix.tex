@@ -1,0 +1,144 @@
+\appendix
+\section{Appendix}
+\label{Appendix}
+
+We include tables generated from data obtained during the grid search training and testing phases, output by script \textbf{TrainNetworks.m}, as well as data obtained manually by running unseen group images (included in .zip project file) though our RecogniseFace function.
+
+Table \ref{table:cnn_stats} shows accuracies obtained for each combination of image type and sample size for CNN classifiers.  
+
+Table \ref{table:hog_stats} shows accuracies obtained for combination of grayscale image and sample size, HOG feature size and cell size for HOG-SVM classifiers.  
+
+Table \ref{table:surf_stats} shows accuracies obtained for combination of grayscale image and sample size and SURF feature size for SURF-SVM classifiers.  
+
+Table \ref{table:group_image_stats} shows the classification results obtained manually and used to compute model accuracy for group images.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\multicolumn{4}{|l|}{CNN accuracy for different image parameters} \\ \hline
+Images  &  Size & Colour Scheme & Accuracy \\ \hline
+50 & 227x227 & rgb & 0.875 \\ \hline
+50 & 128x128 & rgb & 0.75 \\ \hline
+50 & 70x70 & rgb & 1 \\ \hline
+50 & 227x227 & grayscale & 0.8 \\ \hline
+50 & 128x128 & grayscale & 1 \\ \hline
+50 & 70x70 & grayscale & 1 \\ \hline
+100 & 227x227 & rgb & 0.1375 \\ \hline
+100 & 128x128 & rgb & 0.375 \\ \hline
+100 & 70x70 & rgb & 0.9 \\ \hline
+100 & 227x227 & grayscale & 0.275 \\ \hline
+100 & 128x128 & grayscale & 0.7375 \\ \hline
+100 & 70x70 & grayscale & 0.925 \\ \hline
+200 & 227x227 & rgb & 0.71875 \\ \hline
+200 & 128x128 & rgb & 0.99375 \\ \hline
+200 & 70x70 & rgb & 1 \\ \hline
+200 & 227x227 & grayscale & 0.14375 \\ \hline
+200 & 128x128 & grayscale & 0.95 \\ \hline
+200 & 70x70 & grayscale & 1 \\ \hline
+\end{tabular}
+\caption{Optimal image-size search for face classification CNN}
+\label{table:cnn_stats}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\multicolumn{5}{|l|}{HOG-SVM classifier accuracies} \\ \hline
+Images  &  Size & HOG features & Cell Size & Accuracy \\ \hline
+50 & 227x227 & 1500 & [50 50] & 1 \\ \hline
+50 & 128x128 & 1500 & [50 50] & 0.675 \\ \hline
+50 & 70x70 & 1500 & [50 50] & 0.125 \\ \hline
+50 & 227x227 & 2000 & [25 25] & 1 \\ \hline
+50 & 128x128 & 2000 & [25 25] & 1 \\ \hline
+50 & 70x70 & 2000 & [25 25] & 0.775 \\ \hline
+50 & 227x227 & 2500 & [10 10] & 0.825 \\ \hline
+50 & 128x128 & 2500 & [10 10] & 1 \\ \hline
+50 & 70x70 & 2500 & [10 10] & 1 \\ \hline
+100 & 227x227 & 1500 & [50 50] & 0.9875 \\ \hline
+100 & 128x128 & 1500 & [50 50] & 0.65 \\ \hline
+100 & 70x70 & 1500 & [50 50] & 0.125 \\ \hline
+100 & 227x227 & 2000 & [25 25] & 0.9875 \\ \hline
+100 & 128x128 & 2000 & [25 25] & 0.9875 \\ \hline
+100 & 70x70 & 2000 & [25 25] & 0.6125 \\ \hline
+100 & 227x227 & 2500 & [10 10] & 0.7375 \\ \hline
+100 & 128x128 & 2500 & [10 10] & 0.9625 \\ \hline
+100 & 70x70 & 2500 & [10 10] & 1 \\ \hline
+200 & 227x227 & 1500 & [50 50] & 1 \\ \hline
+200 & 128x128 & 1500 & [50 50] & 0.65625 \\ \hline
+200 & 70x70 & 1500 & [50 50] & 0.125 \\ \hline
+200 & 227x227 & 2000 & [25 25] & 0.99375 \\ \hline
+200 & 128x128 & 2000 & [25 25] & 0.99375 \\ \hline
+200 & 70x70 & 2000 & [25 25] & 0.775 \\ \hline
+200 & 227x227 & 2500 & [10 10] & 0.8625 \\ \hline
+200 & 128x128 & 2500 & [10 10] & 0.9875 \\ \hline
+200 & 70x70 & 2500 & [10 10] & 1 \\ \hline
+\end{tabular}
+\caption{Optimal parameter search HOG-SVM classifier}
+\label{table:hog_stats}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\multicolumn{4}{|l|}{SURF-SVM Classifier Accuracy Table} \\ \hline
+Images  &  Size & SURF features & Accuracy \\ \hline
+50 & 227x227 & 40 & 0.525 \\ \hline
+50 & 227x227 & 50 & 0.375 \\ \hline
+50 & 227x227 & 60 & 0.325 \\ \hline
+50 & 128x128 & 40 & 0.575 \\ \hline
+50 & 128x128 & 50 & 0.675 \\ \hline
+50 & 128x128 & 60 & 0.6 \\ \hline
+50 & 70x70 & 40 & 0.875 \\ \hline
+50 & 70x70 & 50 & 0.95 \\ \hline
+50 & 70x70 & 60 & 0.85 \\ \hline
+100 & 227x227 & 40 & 0.925 \\ \hline
+100 & 227x227 & 50 & 0.9 \\ \hline
+100 & 227x227 & 60 & 0.9 \\ \hline
+100 & 128x128 & 40 & 0.925 \\ \hline
+100 & 128x128 & 50 & 0.9375 \\ \hline
+100 & 128x128 & 60 & 0.825 \\ \hline
+100 & 70x70 & 40 & 0.8625 \\ \hline
+100 & 70x70 & 50 & 0.825 \\ \hline
+100 & 70x70 & 60 & 0.8625 \\ \hline
+200 & 227x227 & 40 & 0.9 \\ \hline
+200 & 227x227 & 50 & 0.9125 \\ \hline
+200 & 227x227 & 60 & 0.9 \\ \hline
+200 & 128x128 & 40 & 0.86875 \\ \hline
+200 & 128x128 & 50 & 0.8875 \\ \hline
+200 & 128x128 & 60 & 0.89375 \\ \hline
+200 & 70x70 & 40 & 0.89375 \\ \hline
+200 & 70x70 & 50 & 0.90625 \\ \hline
+200 & 70x70 & 60 & 0.85 \\ \hline
+\end{tabular}
+\caption{Optimal parameter search for SURF-SVM classifier}
+\label{table:surf_stats}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+\multicolumn{6}{|l|}{Classifier accuracy for group images} \\ \hline
+Model &  Faces & Correct & Incorrect & No ID & Image \\ \hline
+CNN & 19 & 2 & 9 & 7 & class1.jpg \\ \hline
+CNN & 20 & 4 & 13 & 3 & class2.jpg  \\ \hline
+CNN & 17 & 4 & 9 & 4 & class3.jpg  \\ \hline
+CNN & 24 & 1 & 14 & 9 & class4.jpg  \\ \hline
+CNN & 21 & 3 & 13 & 5 & class5.jpg  \\ \hline
+HOG-SVM & 19 & 4 & 15 & N/A & class1.jpg \\ \hline
+HOG-SVM & 20 & 4 & 16 & N/A & class2.jpg  \\ \hline
+HOG-SVM & 17 & 2 & 15 & N/A & class3.jpg  \\ \hline
+HOG-SVM & 24 & 1 & 23 & N/A & class4.jpg  \\ \hline
+HOG-SVM & 21 & 2 & 19 & N/A & class5.jpg  \\ \hline
+SURF-SVM & 19 & 1 & 18 & N/A & class1.jpg \\ \hline
+SURF-SVM & 20 & 3 & 17 & N/A & class2.jpg  \\ \hline
+SURF-SVM & 17 & 3 & 14 & N/A & class3.jpg  \\ \hline
+SURF-SVM & 24 & 2 & 22 & N/A & class4.jpg  \\ \hline
+SURF-SVM & 21 & 3 & 18 & N/A & class5.jpg  \\ \hline
+\end{tabular}
+\caption{Values used to compute best-model classifier accuracy}
+\label{table:group_image_stats}
+\end{table}
